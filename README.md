@@ -9,3 +9,4 @@ a security tool that analyzes portable executable (PE) files:
 * Scan files in the memory maped way with the signature based detection
 
 ![My image](https://raw.github.com/jsc0218/PEGuarder/master/images/1.png)
+![My image](https://raw.github.com/jsc0218/PEGuarder/master/images/2.png)
