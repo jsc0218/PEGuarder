@@ -7,3 +7,4 @@ a security tool that analyzes portable executable (PE) files:
 * there is a portable interface (MFC)
 * Output the PE files information
 * Scan files in the memory maped way with the signature based detection
+![My image](jsc0218.github.com/PEGuarder/images/1.jpg)
