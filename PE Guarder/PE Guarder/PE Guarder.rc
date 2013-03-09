@@ -1,0 +1,339 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\PEGuarder.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""afxres.rc""     // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\PE Guarder.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 PE Guarder"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "PE Guarder 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2010",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_PEGUARDER_DIALOG DIALOGEX 0, 0, 424, 324
+STYLE DS_SETFONT | WS_POPUP | WS_VISIBLE | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+FONT 9, "新宋体", 400, 0, 0x86
+BEGIN
+    CONTROL         "",IDC_TAB,"SysTabControl32",TCS_FIXEDWIDTH,7,99,409,218
+    GROUPBOX        "",IDC_STATIC,7,3,409,92
+    PUSHBUTTON      "X",IDOK,402,8,14,9,BS_BITMAP,WS_EX_TRANSPARENT
+    PUSHBUTTON      "-",IDC_MIN,387,8,14,9
+    PUSHBUTTON      "缩小到托盘",IDC_TRAY,370,100,45,12,BS_FLAT
+    PUSHBUTTON      "换肤",IDC_SKIN,335,100,25,12
+END
+
+IDD_ANALYSER DIALOGEX 0, 0, 404, 203
+STYLE DS_SETFONT | WS_CHILD | WS_SYSMENU
+FONT 9, "新宋体", 400, 0, 0x86
+BEGIN
+    GROUPBOX        "",IDC_STATIC,10,2,384,194
+    GROUPBOX        "分析结果",IDC_STATIC,21,13,251,176
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,28,31,237,151
+    GROUPBOX        "文件操作",IDC_STATIC,291,12,88,177
+    PUSHBUTTON      "载入PE文件",IDC_LOADPE,300,31,71,25
+    PUSHBUTTON      "DOS　　头",IDC_DOSHEADER,299,62,72,25
+    PUSHBUTTON      "PE　　头",IDC_PEHEADER,299,93,72,25
+    PUSHBUTTON      "块　　表",IDC_SECTIONTABLE,299,124,72,25
+    PUSHBUTTON      "数据目录",IDC_DATADIRECTORY,299,155,71,25
+    CONTROL         134,IDC_STATIC,"Static",SS_BITMAP,60,10,85,85
+    CONTROL         135,IDC_STATIC,"Static",SS_BITMAP,330,9,43,43
+END
+
+IDD_DETECTOR DIALOGEX 0, 0, 402, 204
+STYLE DS_SETFONT | WS_CHILD | WS_SYSMENU
+FONT 9, "新宋体", 400, 0, 0x86
+BEGIN
+    GROUPBOX        "",IDC_STATIC,10,4,384,193
+    GROUPBOX        "选择扫描目录",IDC_STATIC,13,17,127,172
+    CONTROL         "",IDC_TREE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_CHECKBOXES | TVS_TRACKSELECT | WS_TABSTOP,16,33,121,154
+    LTEXT           "当前查杀对象:",IDC_STATIC,145,24,56,11
+    PUSHBUTTON      "开始扫描",IDC_BeginAndExit,199,180,50,14
+    PUSHBUTTON      "暂停扫描",IDC_SuspendAndResume,286,180,50,14
+    LTEXT           "扫描文件总数:",IDC_STATIC,145,39,60,8
+    LTEXT           "病毒数:",IDC_STATIC,240,39,38,8
+    LTEXT           "耗时:",IDC_STATIC,304,39,21,8
+    CONTROL         "",IDC_LIST2,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,144,57,244,117
+    LTEXT           "-----",IDC_FILENAME,200,24,184,10,SS_PATHELLIPSIS
+    LTEXT           "00小时00分00秒",IDC_TIME,326,39,59,8
+    EDITTEXT        IDC_FILENUM,200,39,37,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_VIRUSNUM,270,39,25,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    GROUPBOX        "",IDC_STATIC,142,17,249,35
+    GROUPBOX        "",IDC_STATIC,142,50,249,127
+    CONTROL         137,IDC_STATIC,"Static",SS_BITMAP,68,9,35,25
+    PUSHBUTTON      "设置",IDC_SET,368,9,23,11
+END
+
+IDD_TOOL DIALOGEX 0, 0, 403, 203
+STYLE DS_SETFONT | WS_CHILD | WS_SYSMENU
+FONT 9, "新宋体", 400, 0, 0x86
+BEGIN
+    GROUPBOX        "常用工具",IDC_STATIC,10,7,384,189
+    GROUPBOX        "文件删除",IDC_STATIC,16,60,170,81
+    GROUPBOX        "文件粉碎",IDC_STATIC,205,60,182,82
+    GROUPBOX        "",IDC_STATIC,52,143,289,49
+    CONTROL         131,IDC_STATIC,"Static",SS_BITMAP,64,149,35,35
+    LTEXT           "1.请谨慎使用文件粉碎功能，粉碎后的文件将无法恢复\n\n2.具有右键菜单功能,选中文件后单击鼠标右键进行删除或粉碎\n\n3.联系方式:jsc.1988@yahoo.com.cn",IDC_STATIC,113,150,223,40,0,WS_EX_TRANSPARENT
+    CONTROL         132,IDC_STATIC,"Static",SS_BITMAP,20,67,43,43
+    CONTROL         133,IDC_STATIC,"Static",SS_BITMAP,209,70,35,35
+    LTEXT           "此功能用于强行删除文件，需重启系统。",IDC_STATIC,60,77,109,18
+    LTEXT           "此功能使用后无法再恢复原文件，慎用。",IDC_STATIC,249,78,127,15
+    GROUPBOX        "请输入要删除或粉碎的文件路径",IDC_STATIC,41,20,325,34
+    EDITTEXT        IDC_FILEPATH,55,32,242,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "浏　览",IDC_BROWSE,307,32,50,14
+    PUSHBUTTON      "删　除",IDC_DELETE,131,120,50,14
+    PUSHBUTTON      "粉　碎",IDC_SHATTER,333,120,50,14
+    CONTROL         "",IDC_SHATTERPROGRESS,"msctls_progress32",WS_BORDER,209,120,117,14
+    LTEXT           "处理进度：",IDC_STATIC,210,110,41,8
+    LTEXT           "100%",IDC_STATICDIGITAL,249,110,17,8
+END
+
+IDD_SET DIALOGEX 100, 130, 231, 134
+STYLE DS_SETFONT | WS_POPUP | WS_BORDER | WS_SYSMENU
+FONT 9, "新宋体", 400, 0, 0x0
+BEGIN
+    GROUPBOX        "设置",IDC_STATIC,7,3,216,124
+    PUSHBUTTON      "添加特征码",IDC_ADDSIGNATURE,15,25,50,14
+    GROUPBOX        "",IDC_STATIC,11,15,58,107
+    GROUPBOX        "",IDC_STATIC,72,15,147,107
+    CONTROL         149,IDC_STATIC,"Static",SS_BITMAP,30,0,27,17
+    PUSHBUTTON      "退出设置",IDCANCEL,16,104,50,14
+    PUSHBUTTON      "病毒库更新",IDC_DBUPDATE,15,46,50,14
+END
+
+IDD_SKIN DIALOGEX 335, 105, 80, 43
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Button1",IDC_SKINBLACK,0,0,79,14,BS_BITMAP
+    PUSHBUTTON      "Button2",IDC_SKINBLUE,0,15,79,14,BS_BITMAP
+    PUSHBUTTON      "Button3",IDC_SKINORANGE,0,29,79,14,BS_BITMAP
+END
+
+IDD_ADDSIGNATURE DIALOGEX 73, 20, 145, 101
+STYLE DS_SETFONT | WS_POPUP | WS_SYSMENU
+FONT 9, "新宋体", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "保存",IDC_SAVE,104,85,39,14
+    EDITTEXT        IDC_SIGNATURE1,40,18,98,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SIGNATURE2,40,34,98,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SIGNATURE3,40,50,98,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SIGNATURE4,40,66,98,14,ES_AUTOHSCROLL
+    GROUPBOX        "请参照已有特征码格式添加",IDC_STATIC,3,4,139,78
+    LTEXT           "特征码1:",IDC_STATIC,6,21,33,8
+    LTEXT           "特征码2:",IDC_STATIC,6,37,33,8
+    LTEXT           "特征码3:",IDC_STATIC,5,53,33,8
+    LTEXT           "特征码4:",IDC_STATIC,6,69,33,8
+    PUSHBUTTON      "参考格式",IDC_FORMAT,57,85,41,14
+END
+
+IDD_DBUPDATE DIALOGEX 73, 20, 144, 102
+STYLE DS_SETFONT | WS_POPUP | WS_SYSMENU
+FONT 9, "新宋体", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "开始更新",IDC_STARTUPDATE,18,76,42,14
+    EDITTEXT        IDC_IP,50,20,89,14,ES_AUTOHSCROLL
+    LTEXT           "服务器IP：",IDC_STATIC,8,23,41,8
+    LTEXT           "服务器端口：",IDC_STATIC,8,48,49,8
+    EDITTEXT        IDC_PORT,59,44,40,14,ES_AUTOHSCROLL
+    GROUPBOX        "配置",IDC_STATIC,4,9,138,56
+    PUSHBUTTON      "停止更新",IDC_STOPUPDATE,83,76,41,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "PE Guarder.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "PE Guarder.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BACKGROUND          BITMAP                  "res\\bk.bmp"
+IDB_ALARM               BITMAP                  "res\\alarm.bmp"
+IDB_DELETE              BITMAP                  "res\\delete.bmp"
+IDB_SHATTER             BITMAP                  "res\\shatter.bmp"
+IDB_ANALLYSIS           BITMAP                  "res\\analysis.bmp"
+IDB_OPERATION           BITMAP                  "res\\operation.bmp"
+IDB_DIRECTORY           BITMAP                  "res\\directory.bmp"
+IDB_BMP_STATE           BITMAP                  "res\\STATEBMP.BMP"
+IDB_SKINBLACK           BITMAP                  "res\\skinblack.bmp"
+IDB_SKINBLUE            BITMAP                  "res\\skinblue.bmp"
+IDB_SKINORANGE          BITMAP                  "res\\skinorange.bmp"
+IDB_SET                 BITMAP                  "res\\set.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU 
+BEGIN
+    POPUP "file"
+    BEGIN
+        MENUITEM "PE Guarder",                  ID_FILE_PEGUARDER
+        MENUITEM "退出",                          ID_FILE_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DBUPDATE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 143
+        BOTTOMMARGIN, 101
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 PE Guarder(&A)..."
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\PEGuarder.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "afxres.rc"     // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
